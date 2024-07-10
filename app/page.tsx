@@ -2,8 +2,9 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { createClient } from "@/utils/supabase/server";
+import { createClient } from "@/lib/supabase/server";
 import { redirect } from "next/navigation";
+import SignOutButton from "./components/SignOutButton";
 
 export default async function ProtectedPage() {
   const supabase = createClient();
@@ -57,9 +58,7 @@ export default async function ProtectedPage() {
       </div>
 
       <div className="flex flex-col sm:flex-row gap-3 sm:gap-5 md:gap-8 self-stretch">
-        <Button className="grow" variant="outline">
-          Sign out
-        </Button>
+        <SignOutButton />
         <Button className="grow">Update</Button>
       </div>
     </div>
