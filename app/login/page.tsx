@@ -51,27 +51,12 @@ const Login: FunctionComponent = () => {
         ))}
       </div>
 
-      <div className="grid w-full max-w-md items-center gap-1.5">
-        <Label htmlFor="password">Password</Label>
-        <Input
-          type="password"
-          id="password"
-          name="password"
-          placeholder="Enter your password here"
-        />
-        {result.validationErrors?.password?._errors?.map((error, idx) => (
-          <Label
-            key={idx}
-            htmlFor="password"
-            className="text-destructive text-sm"
-          >
-            {error}
-          </Label>
-        ))}
+      <div className="flex gap-4 items-center">
+        The social login buttons will go here
       </div>
 
       <Button className="self-stretch" disabled={isExecuting}>
-        Login
+        Send Magic Link
       </Button>
     </form>
   );
