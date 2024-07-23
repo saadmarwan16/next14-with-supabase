@@ -24,6 +24,10 @@ export const createClient = () => {
           }
         },
       },
+      auth: {
+        flowType: "pkce",
+        persistSession: false,
+      },
     }
   );
 };
